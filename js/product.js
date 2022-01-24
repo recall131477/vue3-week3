@@ -27,7 +27,7 @@ const app = createApp({
         })
         .catch((err) => {
           alert(err.data.message);
-          window.location = 'login.html';
+          window.location = 'index.html';
         })
     },
     getProductData() { // 取得產品資料
