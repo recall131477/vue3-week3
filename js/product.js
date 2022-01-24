@@ -108,9 +108,6 @@ const app = createApp({
       console.log(this.tempProduct.imagesUrl);
       this.tempProduct.imagesUrl.push('');
     },
-    toggleEnable(item) { // 切換啟用
-      item.is_enabled = !item.is_enabled;
-    }
   },
   mounted() {
     // 實體化modal(這裡才取的到DOM元素)

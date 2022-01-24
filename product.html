@@ -46,10 +46,9 @@
             <td>{{ item.origin_price }}</td>
             <td>{{ item.price }}</td>
             <td>
-              <a href="javascript:;" class="text-primary text-decoration-none" v-if="item.is_enabled"
-                :class="{'text-success': item.is_enabled}" @click="toggleEnable(item)">啟用</a>
-              <a href="javascript:;" class="text-primary text-decoration-none" v-else
-                @click="toggleEnable(item)">未啟用</a>
+              <span class="text-primary text-decoration-none" v-if="item.is_enabled"
+                :class="{'text-success': item.is_enabled}">啟用</span>
+              <span class="text-primary text-decoration-none" v-else>未啟用</span>
             </td>
             <td>
               <div class="btn-group">
@@ -158,10 +157,10 @@
                   </textarea>
                 </div>
                 <div class="mb-3">
-                  <div class="form-check">
-                    <input id="is_enabled" class="form-check-input" type="checkbox" :true-value="1" :false-value="0"
-                      v-model="tempProduct.is_enabled">
-                    <label class="form-check-label" for="is_enabled">是否啟用</label>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                      v-model="tempProduct.is_enabled" :true-value="1" :false-value="0">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">是否啟用</label>
                   </div>
                 </div>
               </div>
