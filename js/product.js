@@ -105,7 +105,6 @@ const app = createApp({
     },
     uploadImages() { //上傳圖片
       this.tempProduct.imagesUrl = [];
-      console.log(this.tempProduct.imagesUrl);
       this.tempProduct.imagesUrl.push('');
     },
   },
